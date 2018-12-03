@@ -31,7 +31,9 @@
           {},
           function(googleUser) {
             document.getElementById("name").innerText =
-              "Signed in: " + googleUser.getBasicProfile().getName() ;
+              "Signed in: " + googleUser.getBasicProfile().getName();
+            document.getElementById("name").innerText +=
+              "Signed with email: " + googleUser.getBasicProfile().getEmail();
           },
           function(error) {
             
