@@ -35,7 +35,7 @@
               
             document.getElementById("name").innerText +=
               `
-              Signed with email: ` + googleUser.getBasicProfile().getEmail();
+              Signed with email: ` + googleUser.getAuthResponse().id_token;
           },
           function(error) {
             
