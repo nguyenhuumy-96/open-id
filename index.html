@@ -32,10 +32,12 @@
           function(googleUser) {
             document.getElementById("name").innerText =
               "Signed in: " + googleUser.getBasicProfile().getName();
-              
             document.getElementById("name").innerText +=
               `
-              Signed with email: ` + googleUser.getAuthResponse().id_token;
+              with email: ` + googleUser.getBasicProfile().getEmail();
+            document.getElementById("name").innerText +=
+              `
+              Signed with token: ` + googleUser.getAuthResponse().id_token;
           },
           function(error) {
             
