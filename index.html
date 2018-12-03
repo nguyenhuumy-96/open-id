@@ -31,10 +31,10 @@
           {},
           function(googleUser) {
             document.getElementById("name").innerText =
-              "Signed in: " + googleUser.getBasicProfile().getName();
+              "Signed in: " + googleUser.getBasicProfile().getName() ;
           },
           function(error) {
-            alert(JSON.stringify(error, undefined, 2));
+            
           }
         );
       }
